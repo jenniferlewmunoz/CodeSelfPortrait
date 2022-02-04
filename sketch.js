@@ -1,35 +1,33 @@
+var gDebug = true;
+var img;
 
-// Setup code goes here
+function preload() {
+  img = loadImage('drawing.png');
+}
 function setup() {
   createCanvas(600, 600);
+
+  textSize(20);
+  textAlign(LEFT);
 }
 
-//ellipse(x-cord, y-cord, width, height)
-
-// Draw code goes here
 function draw() {
-  background(209);
+  background(200);
+  //image(img, 50, 10, 500, 550);
 
-  // Face shape
   noStroke();
-  fill(210, 180, 140);
-  ellipse(width / 2, 250, 250, 300);
-  ellipse(width / 2, 300, 250, 220);
+  fill(235, 161, 129); //skin color
+  ellipse(300, 100, 10, 10);
+  ellipse(320, 100, 10, 10);
+  ellipse(340, 105, 10, 10);
+  ellipse(360, 125, 10, 10);
 
-  // Mouth
-  fill(168, 100, 50);
+  if (gDebug == true) {
+    drawDebugInfo();
+  }
+}
 
-  // bl= bottom lips, tl = top lip
-  var bl1 = 345;
-  var bl2 = 360;
-  var tl = 335;
-
-  quad(235, bl1, 365, bl1, 310, bl2, 290, bl2);
-  triangle(235, bl1, 310, bl1, 290, tl);
-  triangle(365, bl1, 290, bl1, 310, tl);
-
-  // Eyes
-  fill(0);
-  ellipse(250, 250, 25, 25);
-  ellipse(350, 250, 25, 25);
+function drawDebugInfo() {
+  fill(255);
+  text("X: " + mouseX + "  Y: " + mouse7, 20, height - 20);
 }
