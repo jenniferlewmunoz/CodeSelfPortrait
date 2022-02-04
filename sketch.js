@@ -1,33 +1,29 @@
-var gDebug = true;
-var img;
+// Global Variables
+var gDebugMode = false;
 
-function preload() {
-  img = loadImage('drawing.png');
-}
+// Setup code
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(1200, 600);
 
-  textSize(20);
+  ellipseMode(CENTER);
+
+  textSize(24);
   textAlign(LEFT);
 }
 
+// Draw code
 function draw() {
-  background(200);
-  //image(img, 50, 10, 500, 550);
+  background(0);
 
-  noStroke();
-  fill(235, 161, 129); //skin color
-  ellipse(300, 100, 10, 10);
-  ellipse(320, 100, 10, 10);
-  ellipse(340, 105, 10, 10);
-  ellipse(360, 125, 10, 10);
+  fill(240, 120, 0);
+  ellipse(width / 2, heigh / 2, 200, 100);
 
-  if (gDebug == true) {
+  if (gDebugMode == true) {
     drawDebugInfo();
   }
 }
 
 function drawDebugInfo() {
   fill(255);
-  text("X: " + mouseX + "  Y: " + mouse7, 20, height - 20);
+  text("X: " + mouseX + " Y: " + mouseY, 20, height - 20);
 }
