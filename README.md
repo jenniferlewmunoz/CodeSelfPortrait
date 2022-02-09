@@ -1,6 +1,7 @@
-## Code Self-Portriat
+## Code Self-Portrait
 #### by Jennifer Lew-Munoz
 #### Last updated Feb 08 2022
+
 
 
 ### Overview
